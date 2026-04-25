@@ -26,7 +26,7 @@ export default function AdminPage() {
   const [leads, setLeads] = useState<Lead[]>([]);
 
   async function loadLeads() {
-    const res = await fetch("http://localhost:3001/api/leads");
+    const res = await fetch("https://credit-review-backend.onrender.com/api/leads")
     const data = await res.json();
     setLeads(data);
   }
@@ -41,7 +41,7 @@ export default function AdminPage() {
       <p>Manage credit report review leads.</p>
 
       <a
-        href="http://localhost:3001/api/leads/export"
+        href="https://credit-review-backend.onrender.com/api/leads/export"
         style={{
           display: "inline-block",
           margin: "20px 0",

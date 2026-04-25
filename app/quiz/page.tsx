@@ -24,7 +24,7 @@ const form = new FormData(formElement);
       source: "direct",
     };
 
-    const res = await fetch("http://localhost:3001/api/leads", {
+    const res = await fetch("http://https://credit-review-backend.onrender.com/api/leads", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(lead),

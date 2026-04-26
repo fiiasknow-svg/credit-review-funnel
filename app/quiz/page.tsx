@@ -33,6 +33,7 @@ const form = new FormData(formElement);
     const data = await res.json();
 
     if (res.ok) {
+       window.location.href = "/thank-you";
       setMessage(`Success! Your review request was submitted. Lead score: ${data.score}`);
      formElement.reset();
     } else {
